@@ -26,15 +26,20 @@
     font-size: 16px;
 }
 
-.
+.homepage_docs{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
 
-.homepage_docs_image{
+.doc_image{
     box-sizing: border-box;
     height:150px;
     width: 198px;
 }
 
-.homepage_docs_card_content{
+.doc_card{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -43,7 +48,21 @@
     margin-right:20px;
 }
 
-.homepage_docs_card_content:hover{
+.doc_card:hover{
     border: 1px solid #6E2594;
 }
 
+.homepage_docs{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+
+.content_left{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    margin-left: 20px;
+    align-items: center;
+}

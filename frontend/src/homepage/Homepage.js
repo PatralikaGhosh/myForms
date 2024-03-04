@@ -5,7 +5,7 @@ import FolderOpenIcon from '@material-ui/icons/FolderOpen';
 import { IconButton } from "@material-ui/core";
 import './Homepage.css';
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import homepage_docs_image from '../images/homepage_docs_image.png';
+import doc_image from '../images/homepage_docs_image.png';
 
 function Homepage() {
     return (
@@ -27,14 +27,13 @@ function Homepage() {
             </div>
             <div className="homepage_docs">
                 <div className="doc_card">
-                    <img src={homepage_docs_image} className="doc_image"/>
+                    <img src={doc_image} className="doc_image"/>
                     <div className="doc_card_content">
                         <h5></h5>
                         <div className="doc_content" style={{fontSize:"12px",color:"grey"}}>
                             <div className="content_left">
-                                <StorageIcon style={{color:"white",fontSize:"12px",backgroundColor:"#6E2594",padding:"3px",marginRight:"3px",borderRadius:"2px"}}/> Opened 2 days ago
+                                <StorageIcon style={{color:"white",fontSize:"12px",backgroundColor:"#6E2594",padding:"3px",marginRight:"5px",borderRadius:"2px"}}/> <p style={{marginRight:"5px"}}>Opened 2 days ago</p> <MoreVertIcon style={{fontSize:"16px",color:"grey"}}/>
                             </div>
-                            <MoreVertIcon style={{fontSize:"16px",color:"grey"}}/>
                         </div>
                     </div>
                 </div>
