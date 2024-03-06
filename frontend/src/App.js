@@ -6,7 +6,7 @@ import Homepage from './homepage/Homepage';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Formheader from './headers/Formheader';
 import Questiontabs from './headers/Questiontabs';
-
+import Question_form from './forms/Question_form';
 function App() {
   return (
     <div className="App">
@@ -17,7 +17,7 @@ function App() {
             <Template/>
             <Homepage/>
           </>} />
-          <Route path="/form/:id" element={<><Formheader/><Questiontabs/></>} />
+          <Route path="/form/:id" element={<><Formheader/><Questiontabs/><Question_form/></>} />
         </Routes>
       </Router>
       </div>
