@@ -14,7 +14,7 @@ import formimage from '../images/forms_ss.png';
 import driveimage from '../images/drive_ss.png';
 import Divider from '@material-ui/core/Divider';
 import { FiSettings, FiHelpCircle } from 'react-icons/fi';
-
+import { Link } from "react-router-dom";
 
 
 function SideBar() {
@@ -47,22 +47,30 @@ function SideBar() {
             <Divider/>
             <Divider/>
             <List>
-                <ListItem classname="list_item">
-                    <img src={docimage} style={{height:"20px", width:"20px"}} classname="doc image"/>
-                    <div style={{marginLeft:"20px", fontSize:"14px", fontWeight:"500", color:"grey"}}>Docs</div>
-                </ListItem>
-                <ListItem classname="list_item">
-                    <img src={slidesimage} style={{height:"20px", width:"20px"}} classname="slides image"/>
-                    <div style={{marginLeft:"20px", fontSize:"14px", fontWeight:"500", color:"grey"}}>Slides</div>
-                </ListItem>
-                <ListItem classname="list_item">
-                    <img src={sheetimage} style={{height:"20px", width:"20px"}} classname="sheet image"/>
-                    <div style={{marginLeft:"20px", fontSize:"14px", fontWeight:"500", color:"grey"}}>Sheets</div>
-                </ListItem>
-                <ListItem classname="list_item">
-                    <img src={formimage} style={{height:"20px", width:"20px"}} classname="form image"/>
-                    <div style={{marginLeft:"20px", fontSize:"14px", fontWeight:"500", color:"grey"}}>Forms</div>
-                </ListItem>
+            <ListItem className="list_item">
+                <Link to="https://docs.google.com/document/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+                <img src={docimage} style={{ height: "20px", width: "20px" }} className="doc image" />
+                <div style={{ marginLeft: "20px", fontSize: "14px", fontWeight: "500", color: "grey" }}>Docs</div>
+                </Link>
+            </ListItem>
+            <ListItem className="list_item">
+                <Link to="https://docs.google.com/presentation/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+                <img src={slidesimage} style={{ height: "20px", width: "20px" }} className="slides image" />
+                <div style={{ marginLeft: "20px", fontSize: "14px", fontWeight: "500", color: "grey" }}>Slides</div>
+                </Link>
+            </ListItem>
+            <ListItem className="list_item">
+                <Link to="https://docs.google.com/spreadsheets/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+                <img src={sheetimage} style={{ height: "20px", width: "20px" }} className="sheet image" />
+                <div style={{ marginLeft: "20px", fontSize: "14px", fontWeight: "500", color: "grey" }}>Sheets</div>
+                </Link>
+            </ListItem>
+            <ListItem className="list_item">
+                <Link to="https://docs.google.com/forms/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+                <img src={formimage} style={{ height: "20px", width: "20px" }} className="form image" />
+                <div style={{ marginLeft: "20px", fontSize: "14px", fontWeight: "500", color: "grey" }}>Forms</div>
+                </Link>
+            </ListItem>
             </List>
             <Divider/>
                 <List style={{marginLeft:"8px", marginRight:"8px",marginTop:"15px",marginBottom:"15px"}}>
@@ -77,10 +85,13 @@ function SideBar() {
                 </List>
             <Divider/>
                 <List>
-                <ListItem classname="list_item">
-                    <img src={driveimage} style={{height:"20px", width:"20px"}} classname="drive image"/>
-                    <div style={{marginLeft:"20px", fontSize:"14px", fontWeight:"500", color:"grey"}}>Drive</div>
-                </ListItem>
+                <ListItem className="list_item">
+                    <a href="https://drive.google.com/drive/home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+                        <img src={driveimage} style={{height:"20px", width:"20px"}} className="drive image"/>
+                        <div style={{marginLeft:"20px", fontSize:"14px", fontWeight:"500", color:"grey"}}>Drive</div>
+                    </a>
+                    </ListItem>
+
                 </List>
             <Divider/>
             
