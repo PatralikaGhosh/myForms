@@ -175,7 +175,7 @@ function Question_form() {
                             <div className="add_footer">
                                 <div className="add_question_bottom_left">
                                     <Button size="small" style={{textTransform: 'none', color:"#4285f4", fontSize:"13px",fontWeight:"600"}}>
-                                        <FcRightUp style={{border:"2px solid #4285f4", padding:'2px', marginRight:"8px"}} /> Answer key </Button>
+                                        </Button>
                                 </div>
                                 <div className="add_question_bottom">
                                     <IconButton aria-label="Copy" onClick={()=>{copyQuestion(i)}}>
