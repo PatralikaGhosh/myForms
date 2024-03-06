@@ -3,7 +3,7 @@ import './App.css';
 import Header from './headers/Header';
 import Template from './homepage/Template';
 import Homepage from './homepage/Homepage';
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {HashRouter as Router, Route, Routes} from "react-router-dom";
 import Formheader from './headers/Formheader';
 import Questiontabs from './headers/Questiontabs';
 import Question_form from './forms/Question_form';

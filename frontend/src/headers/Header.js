@@ -9,6 +9,9 @@ import Search from '@material-ui/icons/Search';
 import Avatar from '@material-ui/core/Avatar';
 import avatarimage from '../images/avatar_ss.png';
 import Sidebar from '../sidebar/Sidebar';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
 
 function Header() {
   return (
@@ -30,9 +33,17 @@ function Header() {
             <IconButton>
                 <AppsIcon/>
             </IconButton>
-            <IconButton>
-                <Avatar src={avatarimage}/>
-            </IconButton>
+                <GoogleOAuthProvider clientId="483244214079-s9l319vcubk9uoaaggpma1f922gnod51.apps.googleusercontent.com">
+                <GoogleLogin
+                onSuccess={credentialResponse => {
+                    const decoded = jwtDecode(credentialResponse.credential);
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+                />
+
+                </GoogleOAuthProvider>
         </div>
     </div>
 
