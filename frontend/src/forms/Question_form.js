@@ -99,14 +99,6 @@ function Question_form() {
         setQuestions([...questions, {questionText: "Untitled Question", questionType: "radio", options :[{optionText: "Option 1"}], open:true, required:false}]);
     }
 
-    function onDragEnd(result){ 
-        if(!result.destination) return;
-
-        var items = [...questions];
-        const itemF = reorder(items, result.source.index, result.destination.index);
-        setQuestions(itemF);
-    }
-
     function questionsUI() {
         return questions.map((ques, i) => (
             <div> 
@@ -222,20 +214,7 @@ function Question_form() {
                         <input type="text" className="question_form_top_desc" style={{color:"black"}} placeholder="Form Description"></input>
                     </div>
                 </div>
-
-                <DragDropContext onDragEnd={onDragEnd}>
-                    <Droppable droppableId="droppable">
-                        {(provided, snapshot) => (
-                            <div
-                                {...provided.droppableProps}
-                                ref={provided.innerRef}
-                            >
-                                {questionsUI()}
-                                {provided.placeholder}
-                            </div>
-                        )}
-                    </Droppable>
-                </DragDropContext>
+                {questionsUI()}
             </div>
         </div>
     </div>
