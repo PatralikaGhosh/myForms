@@ -1,3 +1,3 @@
 # myForms
 
-Deployed at: https://patralikaghosh.github.io/myForms/
+Clone of google forms
